@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxTabbedPage x:TypeArguments="viewModels:HomeViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:TravelApp.UI.Views"
+            xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+            xmlns:viewModels="clr-namespace:TravelApp.Core.ViewModels;assembly=TravelApp.Core"
+            x:Class="TravelApp.UI.Views.HomeView"
+            NavigationPage.HasNavigationBar="True">
+
+     <TabbedPage.ToolbarItems>
+          <ToolbarItem Text="Add" Command="{Binding AddCommand}" Icon="add.png"/>
+     </TabbedPage.ToolbarItems>
+
+     <!--<local:HistoryView Title="History" Icon="home.png"/>-->
+     <!--<local:MapView Title="Map" Icon="map.png"/>-->
+     <!--<local:ProfileView Title="Profile" Icon="user.png"/>-->
+</views:MvxTabbedPage>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage x:TypeArguments="viewModels:ProfileViewModel"  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:TravelApp.Core.ViewModels;assembly=TravelApp.Core"
+             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+             x:Class="TravelApp.UI.Views.ProfileView">
+
+        <StackLayout>
+            <Label Text="Welcome to Profile page!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+          <Label Text="Welcome to Profile page!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+          <Label Text="Welcome to Profile page!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+          <Label Text="Welcome to Profile page!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+          <Label Text="Welcome to Profile page!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+     </StackLayout>
+
+</views:MvxContentPage>

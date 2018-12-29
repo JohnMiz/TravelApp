@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelApp.Android", "TravelApp\TravelApp.Android\TravelApp.Android.csproj", "{D49A06D8-157F-404F-BD54-0D8017B07AA5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelApp.UI", "TravelApp\TravelApp\TravelApp.UI.csproj", "{149F6CF6-6578-4D4C-B148-7CBFABEC90BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelApp.Core", "TravelApp.Core\TravelApp.Core.csproj", "{C8D008FA-9C30-4C82-8651-962A87505E03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D49A06D8-157F-404F-BD54-0D8017B07AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D49A06D8-157F-404F-BD54-0D8017B07AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D49A06D8-157F-404F-BD54-0D8017B07AA5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D49A06D8-157F-404F-BD54-0D8017B07AA5}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D49A06D8-157F-404F-BD54-0D8017B07AA5}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D49A06D8-157F-404F-BD54-0D8017B07AA5}.Release|Any CPU.Deploy.0 = Debug|Any CPU
+		{149F6CF6-6578-4D4C-B148-7CBFABEC90BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149F6CF6-6578-4D4C-B148-7CBFABEC90BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149F6CF6-6578-4D4C-B148-7CBFABEC90BB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{149F6CF6-6578-4D4C-B148-7CBFABEC90BB}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C8D008FA-9C30-4C82-8651-962A87505E03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8D008FA-9C30-4C82-8651-962A87505E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8D008FA-9C30-4C82-8651-962A87505E03}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8D008FA-9C30-4C82-8651-962A87505E03}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44F1380E-F023-40D1-86CE-6FBAE602F111}
+	EndGlobalSection
+EndGlobal

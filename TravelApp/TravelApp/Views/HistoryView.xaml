@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage x:TypeArguments="viewModels:HistoryViewModel"
+     xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:TravelApp.Core.ViewModels;assembly=TravelApp.Core"
+             xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+             x:Class="TravelApp.UI.Views.HistoryView"
+                      x:Name="Page">
+     <StackLayout>
+
+          <views:MvxListView HasUnevenRows="True" mvx:Bi.nd="ItemsSource Posts" RefreshCommand="{Binding RefreshCommand}" IsRefreshing="{Binding IsRefreshing}">
+               <views:MvxListView.ItemTemplate>
+                    <DataTemplate>
+                         <TextCell mvx:Bi.nd="Text Experience">
+                              <TextCell.ContextActions>
+                                   <MenuItem Text="Delete"
+                                             Command="{Binding ViewModel.DeleteItemCommand, Source={x:Reference Page}}"
+                                             CommandParameter="{Binding}"
+                                             IsDestructive="True"/>
+                              </TextCell.ContextActions>
+                         </TextCell>
+                    </DataTemplate>
+               </views:MvxListView.ItemTemplate>
+          </views:MvxListView>
+     </StackLayout>
+</views:MvxContentPage>

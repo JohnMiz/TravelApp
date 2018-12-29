@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage x:TypeArguments="viewModels:NewTravelViewModel"  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+              xmlns:viewModels="clr-namespace:TravelApp.Core.ViewModels;assembly=TravelApp.Core"
+             x:Class="TravelApp.UI.Views.NewTravelView">
+     
+     <ContentPage.ToolbarItems>
+          <ToolbarItem Text="Save" Command="{Binding SaveCommand}" Icon="save.png"/>
+     </ContentPage.ToolbarItems>
+     <ContentPage.Content>
+          <StackLayout>
+               <Entry Text="{Binding Experience}" Placeholder="Write your experience" />
+
+               <ListView HasUnevenRows="True" Margin="20, 0"
+                         ItemsSource="{Binding Venues}"
+                         SelectedItem="{Binding SelectedVenue}">
+                    <ListView.ItemTemplate>
+                         <DataTemplate>
+                              <ViewCell>
+                                   <Grid>
+                                        <Grid.ColumnDefinitions>
+                                             <ColumnDefinition Width="*" />
+                                             <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                             <RowDefinition Height="*" />
+                                             <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Label Text="{Binding name}"
+                                               FontAttributes="Bold"/>
+                                        <Label Grid.Row="1" Text="{Binding location.address}" TextColor="DodgerBlue" />
+                                        <Label Grid.Column="1" Text="{Binding location.distance, StringFormat='{0} meters'}" />
+
+                                   </Grid>
+                              </ViewCell>
+                         </DataTemplate>
+                    </ListView.ItemTemplate>
+               </ListView>
+          </StackLayout>
+     </ContentPage.Content>
+     
+</views:MvxContentPage>

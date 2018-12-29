@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage x:TypeArguments="viewModels:MapViewModel"  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:viewModels="clr-namespace:TravelApp.Core.ViewModels;assembly=TravelApp.Core"
+             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+             x:Class="TravelApp.UI.Views.MapView">
+
+     <maps:Map x:Name="locationsMap"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               IsShowingUser="{Binding IsShowingUserLocation}" />
+
+</views:MvxContentPage>
