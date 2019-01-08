@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
 	<string name="app_name">TravelApp</string>
+	<string name="server_client_id">395177236685-nhqjdr496jpvphhp4slmii93s77dftjb.apps.googleusercontent.com</string>
 </resources>

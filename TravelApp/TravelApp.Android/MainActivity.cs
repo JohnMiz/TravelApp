@@ -1,5 +1,4 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
@@ -16,7 +15,7 @@ using System.IO;
 
 namespace TravelApp.Droid
 {
-	 [Activity(Label = "TravelApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	 [Activity(Label = "TravelApp", Icon = "@mipmap/icon", Theme = "@style/MainThemePurple", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	 public class MainActivity : MvxFormsAppCompatActivity
 	 {
 		  protected override void OnCreate(Bundle savedInstanceState)
@@ -28,12 +27,13 @@ namespace TravelApp.Droid
 
 			   Xamarin.FormsMaps.Init(this, savedInstanceState);
 			   CurrentPlatform.Init();
+			  
 			   Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
 
 			   string dbName = "travel_db.sqlite";
 			   string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 			   string fullPath = Path.Combine(folderPath, dbName);
-
+			   
 		  }
 
 		  public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)

@@ -25,6 +25,8 @@
                <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
                </Grid.RowDefinitions>
 
                <StackLayout Grid.Row="0" Spacing="10" VerticalOptions="CenterAndExpand">
@@ -48,14 +50,14 @@
 
 
                <StackLayout Grid.Row="1">
-                    <Button  Text="LOGIN" Command="{Binding LoginCommand}" BackgroundColor="#56d3fd" TextColor="White" HeightRequest="50"
-                            VerticalOptions="Start" CornerRadius="30" Font="Bold" FontSize="18" Margin="0, 0, 0, 10" />
+                    <Button Text="LOGIN" Command="{Binding LoginCommand}" VerticalOptions="Start"
+                             Style="{StaticResource LoginButton}" Margin="0, 0, 0, 10" />
+                    
                     <Label HorizontalOptions="Center" VerticalTextAlignment="Center" Margin="0, 0, 0, 15">
                          <Label.FormattedText>
                               <FormattedString>
                                    <Span Text="Don't have an account? " />
-                                   <Span Text="Register"
-                                         TextColor="#0099cc">
+                                   <Span Text="Register" TextColor="{StaticResource DarkPurple}">
                                         <Span.GestureRecognizers>
                                              <TapGestureRecognizer Command="{Binding RegisterCommand}" />
                                         </Span.GestureRecognizers>
@@ -65,6 +67,20 @@
                     </Label>
                     <ActivityIndicator IsRunning="{Binding IsLoginLoaderRunning}" />
                </StackLayout>
+
+               <Grid Grid.Row="2" Margin="0, 0, 0, 0" VerticalOptions="Start">
+                    <Grid.ColumnDefinitions>
+                         <ColumnDefinition Width="*" />
+                         <ColumnDefinition Width="Auto" />
+                         <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label BackgroundColor="#d4d4d4" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+                    <Label Grid.Column="1" Text="OR" FontSize="18" VerticalOptions="Center" Margin="10, 0, 10, 0" TextColor="Black" />
+                    <Label Grid.Column="2" BackgroundColor="#d4d4d4" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+               </Grid>
+
+               <Button Grid.Row="3" Image="google.png" Text="Continute with Google" BackgroundColor="White" BorderColor="Black"
+                       BorderWidth="1" HeightRequest="30" CornerRadius="10"  Command="{Binding GoogleSignInCommand}"  Font="Bold" FontSize="20" Margin="0,5,0,5" />
           </Grid>
 
           <StackLayout Grid.Row="2" BackgroundColor="#f5f5f5" Spacing="15">
@@ -78,9 +94,7 @@
                          <Label.FormattedText>
                               <FormattedString>
                                    <Span Text="By continuing, you accept the" />
-                                   <Span Text=" Terms of Use"
-                                         TextColor="#0099cc"
-                                         Font="Bold">
+                                   <Span Text=" Terms of Use" Style="{StaticResource BoldPurpleLabel}">
                                         <Span.GestureRecognizers>
                                              <TapGestureRecognizer Command="" />
                                         </Span.GestureRecognizers>
@@ -93,9 +107,7 @@
                          <Label.FormattedText>
                               <FormattedString>
                                    <Span Text="acknowledge our " />
-                                   <Span Text="Privacy Policy"
-                                         TextColor="#0099cc"
-                                         Font="Bold">
+                                   <Span Text="Privacy Policy" Style="{StaticResource BoldPurpleLabel}">
                                         <Span.GestureRecognizers>
                                              <TapGestureRecognizer Command="" />
                                         </Span.GestureRecognizers>

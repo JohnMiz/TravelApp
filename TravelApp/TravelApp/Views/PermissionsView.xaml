@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+             xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+             xmlns:local="clr-namespace:TravelApp.UI.Views"
+             xmlns:viewModels="clr-namespace:TravelApp.Core.ViewModels;assembly=TravelApp.Core"
+             x:TypeArguments="viewModels:PermissionsViewModel"
+             x:Class="TravelApp.UI.Views.PermissionsView"
+             Title="Permissions">
+
+
+     <Grid BackgroundColor="White" Margin="20, 0, 20, 0">
+          <Grid.RowDefinitions>
+               <RowDefinition Height="Auto" />
+               <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+
+
+          <Label Text="Permissions are needed"
+               HorizontalOptions="FillAndExpand" HeightRequest="50" Margin="0, 50, 0, 0"
+                 FontSize="Large"  />
+
+          <Button Grid.Row="1" Text="{Binding AllowPermissionButtonText}" Command="{Binding AllowPermissionCommand}" VerticalOptions="Start"
+                             Style="{StaticResource LoginButton}" Margin="0, 0, 0, 10" />
+
+
+     </Grid>
+
+
+</views:MvxContentPage>

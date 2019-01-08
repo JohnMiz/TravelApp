@@ -10,6 +10,11 @@ using TravelApp.Core.Models;
 using System.Linq;
 using TravelApp.Core.Helpers;
 using System.Security.Cryptography;
+using System.Diagnostics;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 
 namespace TravelApp.Core.ViewModels
 {
@@ -44,6 +49,7 @@ namespace TravelApp.Core.ViewModels
 
 		  public ICommand RegisterCommand { get; private set; }
 		  public ICommand LoginCommand { get; private set; }
+		  public ICommand GoogleSignInCommand { get; private set; }
 
 		  public LoginViewModel(IPageService pageService, IDatabaseService databaseService,
 			   IMvxNavigationService navigationService)
@@ -52,7 +58,8 @@ namespace TravelApp.Core.ViewModels
 			   _DatabaseService = databaseService;
 			   _NavigationService = navigationService;
 
-			   LoginCommand = new Command(async () => {
+			   LoginCommand = new Command(async () =>
+			   {
 
 					bool isEmailEmpty = string.IsNullOrEmpty(Email);
 					bool isPasswordEmpty = string.IsNullOrEmpty(Password);
@@ -82,7 +89,16 @@ namespace TravelApp.Core.ViewModels
 							  if (IsPasswordMatch)
 							  {
 								   IsLoginLoaderRunning = false;
-								   await _NavigationService.Navigate<HomeViewModel>();
+								   var locationPermissionStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.LocationWhenInUse);
+
+								   if (locationPermissionStatus != PermissionStatus.Granted)
+								   {
+										await _NavigationService.Navigate<PermissionsViewModel>();
+								   }
+								   else
+								   {
+										await _NavigationService.Navigate<HomeViewModel>();
+								   }
 							  }
 							  else
 							  {

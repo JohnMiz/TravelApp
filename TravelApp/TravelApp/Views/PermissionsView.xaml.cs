@@ -7,22 +7,15 @@ using System.Threading.Tasks;
 using TravelApp.Core.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Plugin.Connectivity;
 
 namespace TravelApp.UI.Views
 {
 	 [XamlCompilation(XamlCompilationOptions.Compile)]
-	 public partial class LoginView : MvxContentPage<LoginViewModel>
+	 public partial class PermissionsView : MvxContentPage<PermissionsViewModel>
 	 {
-		  public LoginView()
+		  public PermissionsView()
 		  {
 			   InitializeComponent();
-
-			   //BindingContext = new LoginViewModel(new PageService(), new AzureDatabaseService());
-
-			   iconImage.Source = ImageSource.FromResource("TravelApp.UI.Assets.Images.plane.png", typeof(LoginView));
-
-			   IsBusy = true;
 		  }
 	 }
 }

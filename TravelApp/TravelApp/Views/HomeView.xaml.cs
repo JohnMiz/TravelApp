@@ -22,6 +22,13 @@ namespace TravelApp.UI.Views
 			   InitializeComponent();
 
 			   On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+			   //BarBackgroundColor = Color.FromHex("#2196F3");
+			   //BarTextColor = Color.White;
+			   //On<Android>().SetBarItemColor(Color.FromHex("#66FFFFFF"));
+			   //On<Android>().SetBarSelectedItemColor(Color.White);
+
+			   On<Android>().SetIsSwipePagingEnabled(false);
+
 		  }
 
 		  private bool firstTime = true;

@@ -4,5 +4,6 @@
     <SelectedDevice>Pixel_2_XL_API_25</SelectedDevice>
     <DefaultDevice>Pixel_2_XL_API_25</DefaultDevice>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
+    <AndroidDesignerPreferredTheme>Theme.DeviceDefault.NoActionBar.Fullscreen</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>
