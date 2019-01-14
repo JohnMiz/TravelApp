@@ -15,7 +15,7 @@ using System.IO;
 
 namespace TravelApp.Droid
 {
-	 [Activity(Label = "TravelApp", Icon = "@mipmap/icon", Theme = "@style/MainThemePurple", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	 [Activity(Label = "TravelApp", Icon = "@mipmap/ic_launcher", Theme = "@style/MainThemePurple", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	 public class MainActivity : MvxFormsAppCompatActivity
 	 {
 		  protected override void OnCreate(Bundle savedInstanceState)

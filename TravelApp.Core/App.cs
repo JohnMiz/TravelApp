@@ -33,15 +33,8 @@ namespace TravelApp.Core
 			   string fullPath = Path.Combine(folderPath, dbName);
 
 			   DatabaseLocation = fullPath;
-
-			   //var store = new MobileServiceSQLiteStore(DatabaseLocation);
-			   //store.DefineTable<Post>();
-
-			   //MobileService.SyncContext.InitializeAsync(store);
-
-			   //postsTable = MobileService.GetSyncTable<Post>();
-
-			   RegisterAppStart<LoginViewModel>();
+			   
+			   RegisterAppStart<MvxMainViewModel>();
 		  }
 	 }
 }

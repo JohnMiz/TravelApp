@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+             xmlns:mvx="clr-namespace:MvvmCross.Binding;assembly=MvvmCross"
+             xmlns:viewModels="clr-namespace:TravelApp.Core.ViewModels;assembly=TravelApp.Core"
+             x:TypeArguments="viewModels:MvxMainViewModel"
+             x:Class="TravelApp.UI.Views.MainView" NavigationPage.HasNavigationBar="False">
+     
+     <Grid BackgroundColor="White">
+          <Grid.RowDefinitions>
+               <RowDefinition Height="Auto" />
+               <RowDefinition Height="*" />
+               <RowDefinition Height="80" />
+          </Grid.RowDefinitions>
+
+          <Image Aspect="AspectFit" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="0, 50, 0, 80" x:Name="iconImage" HeightRequest="100" />
+
+
+          <Grid Grid.Row="1" Margin="20,0,20,0" VerticalOptions="StartAndExpand">
+               <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="Auto" />
+               </Grid.RowDefinitions>
+
+
+               <Button Grid.Row="0" Image="mail.png" Text="Continute with Email" Command="{Binding ContinueWithEmailCommand}" BackgroundColor="White" BorderColor="Black"
+                       BorderWidth="1" HeightRequest="60" CornerRadius="10"  Font="Bold" FontSize="20" Margin="0,0,0,10" />
+
+               <Grid Grid.Row="1" Margin="0, 0, 0, 0" VerticalOptions="Start">
+                    <Grid.ColumnDefinitions>
+                         <ColumnDefinition Width="*" />
+                         <ColumnDefinition Width="Auto" />
+                         <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label BackgroundColor="#d4d4d4" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+                    <Label Grid.Column="1" Text="OR" FontSize="18" VerticalOptions="Center" Margin="10, 0, 10, 0" TextColor="Black" />
+                    <Label Grid.Column="2" BackgroundColor="#d4d4d4" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+               </Grid>
+
+               <Button Grid.Row="2" Image="google.png" Text="Continute with Google" BackgroundColor="White" BorderColor="Black"
+                       BorderWidth="1" HeightRequest="60" CornerRadius="10"  Command="{Binding GoogleSignInCommand}"  Font="Bold" FontSize="20" Margin="0,5,0,5" />
+
+          </Grid>
+
+          <StackLayout Grid.Row="2" BackgroundColor="#f5f5f5" Spacing="15">
+               <Label HeightRequest="1" BackgroundColor="#E3E3E3"/>
+               <Grid Margin="0,5,0,0">
+                    <Grid.RowDefinitions>
+                         <RowDefinition Height="*" />
+                         <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label HorizontalOptions="CenterAndExpand">
+                         <Label.FormattedText>
+                              <FormattedString>
+                                   <Span Text="By continuing, you accept the" />
+                                   <Span Text=" Terms of Use" Style="{StaticResource BoldPurpleLabel}">
+                                        <Span.GestureRecognizers>
+                                             <TapGestureRecognizer Command="" />
+                                        </Span.GestureRecognizers>
+                                   </Span>
+                                   <Span Text="  and" />
+                              </FormattedString>
+                         </Label.FormattedText>
+                    </Label>
+                    <Label Grid.Row="1" HorizontalOptions="CenterAndExpand">
+                         <Label.FormattedText>
+                              <FormattedString>
+                                   <Span Text="acknowledge our " />
+                                   <Span Text="Privacy Policy" Style="{StaticResource BoldPurpleLabel}">
+                                        <Span.GestureRecognizers>
+                                             <TapGestureRecognizer Command="" />
+                                        </Span.GestureRecognizers>
+                                   </Span>
+                              </FormattedString>
+                         </Label.FormattedText>
+                    </Label>
+               </Grid>
+          </StackLayout>
+     </Grid>
+</views:MvxContentPage>

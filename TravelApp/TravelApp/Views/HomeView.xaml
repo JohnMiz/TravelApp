@@ -9,6 +9,7 @@
 
      <TabbedPage.ToolbarItems>
           <ToolbarItem Text="Add" Command="{Binding AddCommand}" Icon="add.png"/>
+          <ToolbarItem Text="Logout" Command="{Binding LogoutCommand}" Order="Secondary"/>
      </TabbedPage.ToolbarItems>
 
      <!--<local:HistoryView Title="History" Icon="home.png"/>-->

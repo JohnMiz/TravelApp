@@ -26,12 +26,22 @@ namespace TravelApp.Core.ViewModels
 			   set { SetProperty(ref _AllowPermissionButtonText, value); }
 		  }
 
+		  private string _RadioBarLocationImagePath;
+
+		  public string RadioBarLocationImagePath
+		  {
+			   get { return _RadioBarLocationImagePath; }
+			   set { SetProperty(ref _RadioBarLocationImagePath, value); }
+		  }
+
+
 		  public PermissionsViewModel(IPageService pageService, IMvxNavigationService navigationService)
 		  {
 			   _PageService = pageService;
 			   _NavigationService = navigationService;
 
 			   AllowPermissionButtonText = "Allow Permission";
+			   RadioBarLocationImagePath = "button_unchecked.png";
 
 			   AllowPermissionCommand = new Command(async () =>
 			   {
@@ -44,6 +54,11 @@ namespace TravelApp.Core.ViewModels
 					if (await GetPermissions())
 					{
 						 AllowPermissionButtonText = "Next";
+						 RadioBarLocationImagePath = "button_checked.png";
+					}
+					else
+					{
+						 RadioBarLocationImagePath = "button_unchecked.png";
 					}
 			   });
 		  }

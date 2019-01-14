@@ -8,20 +8,17 @@ using TravelApp.Core.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace TravelApp.UI.Views
 {
 	 [XamlCompilation(XamlCompilationOptions.Compile)]
-	 public partial class LoginView : MvxContentPage<LoginViewModel>
+	 public partial class MainView : MvxContentPage<MvxMainViewModel>
 	 {
-		  public LoginView()
+		  public MainView()
 		  {
 			   InitializeComponent();
 
-			   //BindingContext = new LoginViewModel(new PageService(), new AzureDatabaseService());
-
-			   //iconImage.Source = ImageSource.FromResource("TravelApp.UI.Assets.Images.plane.png", typeof(LoginView));
-
-			   IsBusy = true;
+			   iconImage.Source = ImageSource.FromResource("TravelApp.UI.Assets.Images.plane.png", typeof(MainView));
 		  }
 	 }
 }

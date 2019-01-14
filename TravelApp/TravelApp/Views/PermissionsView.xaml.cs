@@ -17,5 +17,10 @@ namespace TravelApp.UI.Views
 		  {
 			   InitializeComponent();
 		  }
+
+		  protected override bool OnBackButtonPressed()
+		  {
+			   return true;
+		  }
 	 }
 }

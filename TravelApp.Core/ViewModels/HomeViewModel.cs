@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using TravelApp.Core.Helpers;
 using Xamarin.Forms;
 
 namespace TravelApp.Core.ViewModels
@@ -16,6 +17,7 @@ namespace TravelApp.Core.ViewModels
 		  private readonly IMvxNavigationService _NavigationService;
 
 		  public ICommand AddCommand { get; private set; }
+		  public ICommand LogoutCommand { get; private set; }
 		  
 		  public IMvxAsyncCommand ShowInitialViewModelsCommand { get; private set; }
 
@@ -26,6 +28,16 @@ namespace TravelApp.Core.ViewModels
 			   AddCommand = new Command(() =>
 			   {
 					_NavigationService.Navigate<NewTravelViewModel>();
+			   });
+
+			   LogoutCommand = new Command(async ()=> {
+
+					App.user = null;
+					Settings.UserId = string.Empty;
+					Settings.IsLoggedIn = false;
+
+					await _NavigationService.Navigate<MvxMainViewModel>();
+
 			   });
 
 			   ShowInitialViewModelsCommand = new MvxAsyncCommand(ShowInitialViewModels);

@@ -77,7 +77,7 @@ namespace TravelApp.Core.ViewModels
 
 						 if (user != null)
 						 {
-							  App.user = user;
+
 
 							  bool IsPasswordMatch = false;
 
@@ -89,6 +89,11 @@ namespace TravelApp.Core.ViewModels
 							  if (IsPasswordMatch)
 							  {
 								   IsLoginLoaderRunning = false;
+
+								   App.user = user;
+								   Settings.IsLoggedIn = true;
+								   Settings.UserId = user.Id;
+
 								   var locationPermissionStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.LocationWhenInUse);
 
 								   if (locationPermissionStatus != PermissionStatus.Granted)
