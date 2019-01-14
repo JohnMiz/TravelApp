@@ -1,4 +1,4 @@
-## Travel App!
+# Travel App!
 
 ## What is this?
 Sample application built with Xamarin.Forms for Android, demonstrating use of Google Maps, Geolocator, Azure Mobile Apps and Easy Tables,
@@ -15,4 +15,3 @@ Foursquare API and a simple logging system.
 * [Permissions Plugin](https://github.com/jamesmontemagno/PermissionsPlugin)
 * [Settings Plugin](https://github.com/jamesmontemagno/SettingsPlugin)
 * [MvvmCross](https://github.com/MvvmCross/MvvmCross)
-
