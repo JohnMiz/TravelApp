@@ -10,7 +10,7 @@ find the best nearby venues for them.
 * Built an easy to use UI using Xamarin.Forms both for iOS and Android
 * *__Skills used__*: C#, Xamarin.Forms, MvvmCross, Azure
 
-## Screenshots
+## Media
 <p align="center">
   <img src="https://github.com/JonathanMiz/TravelApp/blob/master/TravelApp/screenshots.png" width="700" height="700" >
 </p>
