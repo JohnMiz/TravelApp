@@ -10,12 +10,12 @@ find the best nearby venues for them.
 * Built an easy to use UI using Xamarin.Forms both for iOS and Android
 * *__Skills used__*: C#, Xamarin.Forms, MvvmCross, Azure
 
-### Screenshots
+## Screenshots
 <p align="center">
   <img src="https://github.com/JonathanMiz/TravelApp/blob/master/TravelApp/screenshots.png" width="700" height="700" >
 </p>
 
-### Technology Used
+## Technology Used
 * [Xamarin.Forms](http://xamarin.com/forms)
 * [Xamarin.Forms Maps](https://www.nuget.org/packages/Xamarin.Forms.Maps/3.4.0.1009999)
 * [Geolocator Plugin](https://github.com/jamesmontemagno/GeolocatorPlugin)
@@ -24,7 +24,7 @@ find the best nearby venues for them.
 * [Settings Plugin](https://github.com/jamesmontemagno/SettingsPlugin)
 * [MvvmCross](https://github.com/MvvmCross/MvvmCross)
 
-### Future Features
+## Future Features
 * Using [Auth0](https://auth0.com/) for secured user management
 * Showing the user the fastest route to go to a venue using shortest path algorithms
 * Letting the user add friends and see what venues they visited
